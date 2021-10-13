@@ -266,6 +266,6 @@ const main = async () => {
   try {
     await main()
   } catch (error) {
-    core.setFailed(error.message)
+    core.info(error.message)
   }
 })()

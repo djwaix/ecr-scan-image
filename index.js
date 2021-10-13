@@ -262,10 +262,10 @@ const main = async () => {
   }
 }
 
-//;(async function () {
-  //try {
-    //await main()
-  //} catch (error) {
-    //core.info(error.message)
-  //}
-//})()
+;(async function () {
+  try {
+    await main()
+  } catch (error) {
+    core.info(error.message)
+  }
+})()

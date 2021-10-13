@@ -257,7 +257,10 @@ const main = async () => {
   //if (numFailingVulns > 0) {
     //throw new Error(`Detected ${numFailingVulns} vulnerabilities with severity >= ${failThreshold} (the currently configured fail_threshold).`)
   //}
-  console.log(`Detected severity >= ${failThreshold} (the currently configured fail_threshold).`);
+  if (failThreshold == 'high') {
+    console.log(`Detected severity >= ${failThreshold} (the currently configured fail_threshold).`);
+  }
+
   if (numFailingVulns > 0) {
     throw new Error(`Detected ${numFailingVulns} vulnerabilities with severity >= ${failThreshold} (the currently configured fail_threshold).`)
   }
